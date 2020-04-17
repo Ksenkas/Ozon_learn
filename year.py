@@ -6,7 +6,7 @@ if research != 0:
 	print ( now, "- год, как год" )
 else:
 	if research2 != 0:
-		print ( now, "- cложный год" )
+		print ( now, "- cложный __год" )
 	else:
 		if research3 == 0:
 			print ( now, "- cложный год" )
