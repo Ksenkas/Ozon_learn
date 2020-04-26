@@ -12,7 +12,11 @@ bet_clr = 0
 a = 0
 while a != 1:
     bet = input("Делайте ваши ставки, господа, от 0 до 36 или красное и черное: ")
-    if isinstance(bet, str):
+    if bet.isdigit():
+        if int(bet) in slot:
+            a = 1
+            print('Го3')
+    else:
         bet.lower()
         if str(bet) == 'красное':
             bet_clr = color_list[0]
@@ -22,11 +26,8 @@ while a != 1:
             bet_clr = color_list[1]
             a = 1
             print('Играет черное!')
-    if isinstance(bet,int):
-        if bet in range(0, 37):
-            a = 1
-            print('Го3')
-#результат
+
+#  результат
 spin = random.choice(slot)
 i = spin
 clr = 5
@@ -48,7 +49,7 @@ print('Выпало', end=' ')
 print(i, clr)
 
 
-if spin == bet or bet_clr == clr:
+if str(spin) == bet or bet_clr == clr:
     print('winner')
 else:
     print('loser')
