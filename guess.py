@@ -1,5 +1,7 @@
 #загадать число
 import random
+
+
 clue = random.randint (1, 20)
 #print (clue)
 
