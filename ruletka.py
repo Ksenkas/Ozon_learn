@@ -12,7 +12,7 @@ bet_clr = 0
 a = 0
 while a != 1:
     bet = input("Делайте ваши ставки, господа, от 0 до 36 или красное и черное: ")
-    if isinstance(bet, str):
+    if bet.isdigit() == False:
         bet.lower()
         if str(bet) == 'красное':
             bet_clr = color_list[0]
@@ -22,7 +22,8 @@ while a != 1:
             bet_clr = color_list[1]
             a = 1
             print('Играет черное!')
-    if isinstance(bet,int):
+    else:
+        bet = int(bet)
         if bet in range(0, 37):
             a = 1
             print('Го3')
