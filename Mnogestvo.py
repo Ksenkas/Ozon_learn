@@ -14,7 +14,7 @@ suspect = live_near.union(work_near)
 
 # найдем подозреваемых
 suspect_car = shevrole_owner.intersection(suspect)
-print(*ssuspect_car)
+print(*suspect_car)
 
 
 
